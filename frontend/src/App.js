@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
+import { BrowserRouter } from 'react-router-dom';
+
+import Routes from './routes';
+
 import './App.css';
-import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+import 'antd/dist/antd.css';
 
 import CustomLayout from './containers/Layout'
 
@@ -8,11 +12,16 @@ import CustomLayout from './containers/Layout'
 class App extends Component{
   render(){
     return(
-      <div className="App">
-        <CustomLayout/>
-      </div>
+      <BrowserRouter>
+      <CustomLayout>
+        <Routes />
+      </CustomLayout>
+    </BrowserRouter>
+
     )
   }
 }
 
 export default App;
+
+

@@ -16,11 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from imc.api import viewsets as usuariosviewset
-
+from imc.api import viewsets as usuariosViewSet
 
 route = routers.DefaultRouter()
-route.register(r'usuarios', usuariosviewset.UsuariosViewset, basename='usuarios')
+route.register(r'', usuariosViewSet.UsuariosViewset, basename='usuarios')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

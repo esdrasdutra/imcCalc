@@ -5,3 +5,14 @@ class UsuariosSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Usuarios
         fields = '__all__'
+
+    def validate_peso(self, value):
+        if (value) < 0:
+            raise serializers.ValidationError('O valor deve ser positivo')
+        return (value)
+
+    def validate_altura(self, value):
+        if (value) < 0:
+            raise serializers.ValidationError('O valor deve ser positivo')
+        return (value)
+    
