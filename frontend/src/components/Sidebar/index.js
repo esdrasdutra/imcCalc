@@ -6,7 +6,7 @@ function Sidebar() {
   return (
     <Container>
       <SidebarLink to="/">Início</SidebarLink>
-      <SidebarLink to="/contact">Contato</SidebarLink>
+      <SidebarLink to="/resultado">Resultado</SidebarLink>
     </Container>
   );
 }

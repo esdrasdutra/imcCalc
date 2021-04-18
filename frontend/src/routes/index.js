@@ -2,13 +2,13 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Main from '../pages/Main';
-import Calculator from '../pages/Calculator';
+import Result from '../pages/Result';
 
 export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Main} />
-      <Route path="/contact" exact component={Calculator} />
+      <Route path="/resultado" exact component={Result} />
     </Switch>
   );
 }
